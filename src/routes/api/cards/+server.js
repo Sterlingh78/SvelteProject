@@ -1,5 +1,5 @@
 export async function GET() {
-    let query = 'ajani'
+    let query = 'planeswalker'
     let results
     try {
         const response = await fetch(`https://api.scryfall.com/cards/search?order=cmc&q=${query}`)
