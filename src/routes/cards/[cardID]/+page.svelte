@@ -1,5 +1,5 @@
 <script>
-    export let data;
+     export let data;
     let cards = data.results.data
     console.log(data)
 </script>
