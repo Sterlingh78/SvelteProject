@@ -4,5 +4,6 @@
         <a class="btn btn-ghost normal-case text-xl" href="/cards">Cards</a>
         <a class="btn btn-ghost normal-case text-xl" href="/news">News Articles</a>
         <a class="btn btn-ghost normal-case text-xl" href="/players">NBA Players</a>
+        <a class="btn btn-ghost normal-case text-xl" href="/dashboard">Dashboard</a>
     </div>
 </div>

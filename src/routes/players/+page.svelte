@@ -1,7 +1,7 @@
 <script>
     import { enhance } from '$app/forms'
     export let form;
-    $: players = form.data
+    //$: players = form.data
 </script>
 
 <main>
@@ -10,7 +10,10 @@
         <button type="submit" value="Submit" class="btn btn-primary m-1">Submit</button>
     </form>
     <div class="flex flex-wrap justify-center">
-    {#each players as player}
+    {#if !form}
+    <p>Please Enter Search Terms</p>
+    {:else}
+    {#each form.data as player}
     <div class="card w-96 bg-neutral text-neutral-content m-4">
         <div class="card-body items-center text-center">
           <h2 class="card-title">{player.first_name} {player.last_name}</h2>
@@ -21,5 +24,6 @@
         </div>
       </div>
     {/each}
+    {/if}
     </div>
 </main> 
