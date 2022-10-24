@@ -4,7 +4,9 @@
 
 	function changeTheme(event) {
 		let theme = event.target.value
+		console.log(theme)
 		localStorage.setItem("test",theme)
+		location.reload()
 	}
 </script>
 <div class="navbar bg-base-100">
@@ -30,7 +32,7 @@
             <li><a href="/auth/signup">Sign Up</a></li>
             <li><a href="/auth/login">Log In</a></li>
 			<li>
-				<select class="select w-full max-x-xs" on:click={changeTheme}>
+				<select class="select w-full max-x-xs" on:change={changeTheme}>
 					<option>Theme</option>
 					{#each themeOptions as theme}
 						<option value={theme}>
