@@ -1,10 +1,17 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" id="mainWrapper">
 	<head>
 		<meta charset="utf-8" />
 		<link rel="icon" href="%sveltekit.assets%/favicon.png" />
 		<meta name="viewport" content="width=device-width" />
 		%sveltekit.head%
+		<script>
+			let wrapper = document.querySelector('#mainWrapper')
+			let selectedTheme = localStorage.getItem("test")
+			wrapper.setAttribute('data-theme',selectedTheme)
+			console.log("testing html")
+			
+		</script>
 	</head>
 	<body>
 		<div>%sveltekit.body%</div>
