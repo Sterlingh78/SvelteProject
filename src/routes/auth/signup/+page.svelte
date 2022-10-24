@@ -1,15 +1,15 @@
 <script>
 	import { enhance } from '$app/forms'
-	const passwords = {
-		first: '',
-		confirm: ''
-	}
+	let pass 
 	let button
 
-	$: if (passwords.first !== '') {
-		if (passwords.first == passwords.confirm) {
+	function validation(event) {
+		let value = event.srcElement.value
+		if (value !== '') {
+		if (value == pass) {
 			button.disabled = false
 		}
+	}
 	}
 </script>
 
@@ -43,13 +43,13 @@
 			<label class="label">
 			  <span class="label-text">Password</span>
 			</label>
-			<input type="password" name="password" required placeholder="password" class="input input-accent input-bordered" bind:value={passwords.first} />
+			<input type="password" name="password" required placeholder="password" class="input input-accent input-bordered" bind:value={pass} />
 		  </div>
 		  <div class="form-control">
 			<label class="label">
 			  <span class="label-text">Confirm Password</span>
 			</label>
-			<input type="password" name="confirmPassword" required placeholder="confirm password" class="input input-accent input-bordered" bind:value={passwords.confirm} />
+			<input type="password" name="confirmPassword" required placeholder="confirm password" class="input input-accent input-bordered" on:input={validation}/>
 		  </div>
 		  <div class="form-control mt-4">
 			<button class="btn btn-primary" type="submit" disabled bind:this={button}>Submit</button>

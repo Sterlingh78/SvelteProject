@@ -11,7 +11,7 @@
     </form>
     <div class="flex flex-wrap justify-center">
     {#if !form}
-    <p>Please Enter Search Terms</p>
+    <p class="hero min-h-screen">Please Enter Search Terms</p>
     {:else}
     {#each form.data as player}
     <div class="card w-96 bg-neutral text-neutral-content m-4">
