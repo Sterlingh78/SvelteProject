@@ -1,6 +1,7 @@
 # DGM3790 Svelte Project
 
 Here you will find my personal project for learning Svelte in DGM3790. Below I have specified where certain features can be found within the app.
+(Note: I had to make a new Repo for this project at the beginning of October due to issues I was having with the original)
 
 ## DOM Events
 
