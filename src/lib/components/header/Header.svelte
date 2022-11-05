@@ -1,12 +1,20 @@
 <script>
 	import { goto } from '$app/navigation'
+	import { theme } from '../../stores/theme.js'
     let themeOptions = ['light', 'dark', 'cupcake', 'aqua', 'dracula', 'winter']
 
-	function changeTheme(event) {
+	let selectedTheme
+
+	/*function changeTheme(event) {
 		let theme = event.target.value
 		console.log(theme)
 		localStorage.setItem("test",theme)
 		location.reload()
+	}*/
+
+	$: if (selectedTheme && selectedTheme !== 'Theme') {
+		$theme = selectedTheme
+		console.log($theme)
 	}
 </script>
 <div class="navbar bg-base-100">
@@ -32,7 +40,7 @@
             <li><a href="/auth/signup">Sign Up</a></li>
             <li><a href="/auth/login">Log In</a></li>
 			<li>
-				<select class="select w-full max-x-xs" on:change={changeTheme}>
+				<select class="select w-full max-x-xs" bind:value={selectedTheme}>
 					<option>Theme</option>
 					{#each themeOptions as theme}
 						<option value={theme}>
