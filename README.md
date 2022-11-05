@@ -1,38 +1,18 @@
-# create-svelte
+# DGM3790 Svelte Project
 
-Everything you need to build a Svelte project, powered by [`create-svelte`](https://github.com/sveltejs/kit/tree/master/packages/create-svelte).
+Here you will find my personal project for learning Svelte in DGM3790. Below I have specified where certain features can be found within the app.
+(Note: I had to make a new Repo for this project at the beginning of October due to issues I was having with the original)
 
-## Creating a project
+## DOM Events
 
-If you're seeing this, you've probably already done this step. Congrats!
+News route populates page with article data after clicking on article image in the side drawer. [News](https://github.com/Sterlingh78/SvelteProject/blob/master/src/routes/news/%2Bpage.svelte)
 
-```bash
-# create a new project in the current directory
-npm create svelte@latest
+Signup route has basic form validation for creating a password. [Sign Up](https://github.com/Sterlingh78/SvelteProject/blob/master/src/routes/auth/signup/%2Bpage.svelte)
 
-# create a new project in my-app
-npm create svelte@latest my-app
-```
+I have implemented a theme changer in the drop-down menu using an event to store the theme in local storage. [Theme Change in Header](https://github.com/Sterlingh78/SvelteProject/blob/master/src/lib/components/header/Header.svelte)
 
-## Developing
+## Form Components
 
-Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
+Sign up with form validation [Sign Up](https://github.com/Sterlingh78/SvelteProject/blob/master/src/routes/auth/signup/%2Bpage.svelte)
 
-```bash
-npm run dev
-
-# or start the server and open the app in a new browser tab
-npm run dev -- --open
-```
-
-## Building
-
-To create a production version of your app:
-
-```bash
-npm run build
-```
-
-You can preview the production build with `npm run preview`.
-
-> To deploy your app, you may need to install an [adapter](https://kit.svelte.dev/docs/adapters) for your target environment.
+Log In Component [Log In](https://github.com/Sterlingh78/SvelteProject/blob/master/src/routes/auth/login/%2Bpage.svelte)
