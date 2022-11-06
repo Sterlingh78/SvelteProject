@@ -37,6 +37,7 @@
 			{#if $credentials.email !== ''}
 			<li><h2>Welcome {$credentials.firstName}!</h2></li>
 			<li><a>Profile</a></li>
+			<li on:click={logout}><a>Logout</a></li>
 			{/if}
 			<li><a>Settings</a></li>
 			{#if $credentials.email == ''}
@@ -53,7 +54,6 @@
 					{/each}
 				</select>
 			</li>
-			<li on:click={logout}><a>Logout</a></li>
 		</ul>
 	</div>
 </div>
