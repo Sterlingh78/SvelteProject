@@ -1,7 +1,21 @@
 <script>
 	import { enhance } from '$app/forms'
+	import { credentials } from '../../../lib/stores/credentials.js'
+
 	let pass 
 	let button
+	const userInput = {
+		firstName: '',
+		lastName: '',
+		email: ''
+	}
+
+	function setCredentials() {
+		console.log("firing")
+		$credentials.firstName = userInput.firstName
+		$credentials.lastName = userInput.lastName
+		$credentials.email = userInput.email
+	}
 
 	function validation(event) {
 		let value = event.srcElement.value
@@ -25,19 +39,19 @@
 			<label class="label">
 			  <span class="label-text">First Name</span>
 			</label>
-			<input type="text" name="fname" required placeholder="first name" class="input input-accent input-bordered" />
+			<input type="text" name="fname" required placeholder="first name" class="input input-accent input-bordered" bind:value={userInput.firstName}/>
 		  </div>
 		  <div class="form-control">
 			<label class="label">
 			  <span class="label-text">Last Name</span>
 			</label>
-			<input type="text" name="lname" required placeholder="last name" class="input input-accent input-bordered" />
+			<input type="text" name="lname" required placeholder="last name" class="input input-accent input-bordered" bind:value={userInput.lastName}/>
 		  </div>
 		  <div class="form-control">
 			<label class="label">
 			  <span class="label-text">Email</span>
 			</label>
-			<input type="text" name="email" required placeholder="email" class="input input-accent input-bordered" />
+			<input type="text" name="email" required placeholder="email" class="input input-accent input-bordered" bind:value={userInput.email}/>
 		  </div>
 		  <div class="form-control">
 			<label class="label">
@@ -52,7 +66,7 @@
 			<input type="password" name="confirmPassword" required placeholder="confirm password" class="input input-accent input-bordered" on:input={validation}/>
 		  </div>
 		  <div class="form-control mt-4">
-			<button class="btn btn-primary" type="submit" disabled bind:this={button}>Submit</button>
+			<button class="btn btn-primary" type="submit" disabled bind:this={button} on:click={setCredentials}>Submit</button>
 		  </div>
 		</form>
 	  </div>
