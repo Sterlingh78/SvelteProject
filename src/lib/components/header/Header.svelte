@@ -9,6 +9,12 @@
 	$: if (selectedTheme && selectedTheme !== 'Theme') {
 		$theme = selectedTheme
 	}
+
+	function logout() {
+		$credentials.firstName = ''
+		$credentials.lastName = ''
+		$credentials.email = ''
+	}
 </script>
 <div class="navbar bg-base-100">
     <div class="flex-1">
@@ -30,8 +36,8 @@
 		>
 			{#if $credentials.email !== ''}
 			<li><h2>Welcome {$credentials.firstName}!</h2></li>
-			{/if}
 			<li><a>Profile</a></li>
+			{/if}
 			<li><a>Settings</a></li>
 			{#if $credentials.email == ''}
             <li><a href="/auth/signup">Sign Up</a></li>
@@ -47,7 +53,7 @@
 					{/each}
 				</select>
 			</li>
-			<li><a>Logout</a></li>
+			<li on:click={logout}><a>Logout</a></li>
 		</ul>
 	</div>
 </div>
