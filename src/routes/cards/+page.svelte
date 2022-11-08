@@ -1,6 +1,13 @@
 <script>
-    export let data;
-    let cards = data.data;
+    import { onMount } from 'svelte'
+    let cards = []
+
+    onMount(async () => {
+        const res = await fetch('/api/cards')
+        const cardList = await res.json()
+
+        cards = [...cardList.data]
+    })
 </script>
 
 <main class="flex flex-wrap justify-center">
