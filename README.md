@@ -9,7 +9,7 @@ Added onMount function to the cards route, making an API call and passing data t
 
 ## Writable Stores
 
-Sign up route sends form data to named action and commits the data to a store for retrieval [Sign Up](https://github.com/Sterlingh78/SvelteProject/blob/master/src/routes/auth/signup/%2Bpage.svelte)
+Sign up route sets the credential store values to the user inputed values [Sign Up](https://github.com/Sterlingh78/SvelteProject/blob/master/src/routes/auth/signup/%2Bpage.svelte)
 
 Header conditionally renders links and displays welcome message based upon user credentials store [Header](https://github.com/Sterlingh78/SvelteProject/blob/master/src/lib/components/header/Header.svelte)
 
