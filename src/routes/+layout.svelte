@@ -1,10 +1,16 @@
 <script>
     import { theme } from '../lib/stores/theme.js'
+    import { navigating } from '$app/stores';
+    import { loading } from '../lib/stores/loading.js'
     import "../app.css";
     import Header from '../lib/components/header/Header.svelte';
+
+    $: $loading = !!$navigating
 </script>
 
 <div data-theme={$theme}>
+
+<h2>{$loading}</h2>
 
 <Header />
   
