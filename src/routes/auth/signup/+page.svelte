@@ -21,7 +21,9 @@
 		let value = event.srcElement.value
 		if (value !== '') {
 		if (value == pass) {
-			button.disabled = false
+			button.style.display = "inline-flex"
+		} else {
+			button.style.display = "none"
 		}
 	}
 	}
@@ -66,9 +68,15 @@
 			<input type="password" name="confirmPassword" required placeholder="confirm password" class="input input-accent input-bordered" on:input={validation}/>
 		  </div>
 		  <div class="form-control mt-4">
-			<button class="btn btn-primary" type="submit" disabled bind:this={button} on:click={setCredentials}>Submit</button>
+			<button id="submitBtn" class="btn btn-primary" type="submit" bind:this={button} on:click={setCredentials}>Submit</button>
 		  </div>
 		</form>
 	  </div>
 	</div>
   </div>
+
+  <style>
+	#submitBtn {
+		display: none;
+	}
+  </style>
