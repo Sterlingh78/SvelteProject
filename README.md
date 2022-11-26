@@ -5,17 +5,17 @@ Here you will find my personal project for learning Svelte in DGM3790. Below I h
 
 ## Tween
 
-Individual cards in my cards page rotate slightly when selected for the detail page [cards tween] (https://github.com/Sterlingh78/SvelteProject/blob/master/src/routes/cards/%2Bpage.svelte)
+Individual cards in my cards page rotate slightly when selected for the detail page [cards tween](https://github.com/Sterlingh78/SvelteProject/blob/master/src/routes/cards/%2Bpage.svelte)
 
 ## Transitions
 
-Submit button transitions in/out based on page form validation [Submit tween] (https://github.com/Sterlingh78/SvelteProject/blob/master/src/routes/auth/signup/%2Bpage.svelte)
+Submit button transitions in/out based on page form validation [Submit tween](https://github.com/Sterlingh78/SvelteProject/blob/master/src/routes/auth/signup/%2Bpage.svelte)
 
-Added loading functionality to transition an animation in/out if page is loading [Loading] (https://github.com/Sterlingh78/SvelteProject/blob/master/src/routes/%2Blayout.svelte)
+Added loading functionality to transition an animation in/out if page is loading [Loading](https://github.com/Sterlingh78/SvelteProject/blob/master/src/routes/%2Blayout.svelte)
 
 ## Animate Directive
 
-Added button to sort cards A-Z and use the flip animation when moving [Cards Sort] (https://github.com/Sterlingh78/SvelteProject/blob/master/src/routes/cards/%2Bpage.svelte)
+Added button to sort cards A-Z and use the flip animation when moving [Cards Sort](https://github.com/Sterlingh78/SvelteProject/blob/master/src/routes/cards/%2Bpage.svelte)
 
 ## onMount Lifecycle Function
 
