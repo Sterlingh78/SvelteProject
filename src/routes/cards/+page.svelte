@@ -1,8 +1,9 @@
 <script>
     import { onMount } from 'svelte'
     import { flip } from 'svelte/animate'
-    import { tweened } from 'svelte/motion';
-	import { cubicOut } from 'svelte/easing';
+    import { quintOut } from 'svelte/easing'
+    import { tweened } from 'svelte/motion'
+	import { cubicOut } from 'svelte/easing'
 
 	const rotate = tweened(0, {
 		duration: 1100,
@@ -15,7 +16,13 @@
         event.target.style = `transform: rotate(${$rotate}turn)`
     }
 
-    let cards = []
+    $: cards = []
+
+    function sortCards() {
+        const newCards = cards.sort((a, b) => a.name.localeCompare(b.name))
+        cards = []
+        cards = [...newCards]
+    }
 
     onMount(async () => {
         const res = await fetch('/api/cards')
@@ -25,14 +32,17 @@
     })
 </script>
 
-<main class="flex flex-wrap justify-center">
-    {#each cards as card}
-    <div class="card w-96 bg-base-100 drop-shadow-lg m-4">
-        <a href={`/cards/${card.id}`}>
-        <figure on:click={tweenCard} class="px-10 pt-10">
-         <img src={card.image_uris.normal} alt="Shoes" class="rounded-xl" /> 
-        </figure>
-        </a>
+<main>
+    <button class="btn btn-primary m-4" on:click={sortCards}>Sort A-Z</button>
+    <div class="flex flex-wrap justify-center">
+        {#each cards as card (card.id)}
+        <div animate:flip="{{delay: 250, duration: 250, easing: quintOut}}" class="card w-96 bg-base-100 drop-shadow-lg m-4">
+            <a href={`/cards/${card.id}`}>
+            <figure on:click={tweenCard} class="px-10 pt-10">
+            <img src={card.image_uris.normal} alt="Shoes" class="rounded-xl" /> 
+            </figure>
+            </a>
+        </div>
+        {/each}
     </div>
-    {/each}
 </main> 
