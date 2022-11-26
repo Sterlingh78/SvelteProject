@@ -13,6 +13,10 @@ Submit button transitions in/out based on page form validation [Submit tween] (h
 
 Added loading functionality to transition an animation in/out if page is loading [Loading] (https://github.com/Sterlingh78/SvelteProject/blob/master/src/routes/%2Blayout.svelte)
 
+## Animate Directive
+
+Added button to sort cards A-Z and use the flip animation when moving [Cards Sort] (https://github.com/Sterlingh78/SvelteProject/blob/master/src/routes/cards/%2Bpage.svelte)
+
 ## onMount Lifecycle Function
 
 Added onMount function to the cards route, making an API call and passing data to the page to display. No longer needed the page.js file after this change [Cards onMount](https://github.com/Sterlingh78/SvelteProject/blob/master/src/routes/cards/%2Bpage.svelte)
