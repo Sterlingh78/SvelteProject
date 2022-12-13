@@ -67,6 +67,8 @@ Theme and credentials stores are used in these additional pages:
 
 Tween card when clicked [cards](https://github.com/Sterlingh78/SvelteProject/blob/master/src/routes/cards/%2Bpage.svelte)
 
+Animate all cards on sort A-Z [cards](https://github.com/Sterlingh78/SvelteProject/blob/master/src/routes/cards/%2Bpage.svelte)
+
 Submit button transitions in/out based on page form validation [signup](https://github.com/Sterlingh78/SvelteProject/blob/master/src/routes/auth/signup/%2Bpage.svelte)
 
 Added loading functionality to transition an animation in/out if page is loading [Loading](https://github.com/Sterlingh78/SvelteProject/blob/master/src/routes/%2Blayout.svelte)
