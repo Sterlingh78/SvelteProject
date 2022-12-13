@@ -35,6 +35,35 @@ Radar graph component [radar](https://github.com/Sterlingh78/SvelteProject/tree/
 
 Scatter graph component [scatter](https://github.com/Sterlingh78/SvelteProject/tree/master/src/lib/components/scatter)
 
+## User Events
+
+Form validation from events in signup [signup](https://github.com/Sterlingh78/SvelteProject/tree/master/src/routes/auth/signup)
+
+Tween card from user click event [cards](https://github.com/Sterlingh78/SvelteProject/tree/master/src/routes/cards)
+
+Populate page content based on selected article [news](https://github.com/Sterlingh78/SvelteProject/tree/master/src/routes/news)
+
+## Forms
+
+Sign Up form with validation for email, name, and password confirmation [signup](https://github.com/Sterlingh78/SvelteProject/tree/master/src/routes/auth/signup)
+
+Login form [login](https://github.com/Sterlingh78/SvelteProject/tree/master/src/routes/auth/login)
+
+## Lifestyle functions and stores
+
+onMount function in cards to display cards [cards](https://github.com/Sterlingh78/SvelteProject/tree/master/src/routes/cards)
+
+Using stores for site theme and user credentials [header](https://github.com/Sterlingh78/SvelteProject/tree/master/src/lib/components/header)
+
+Theme and credentials stores are used in these additional pages:
+
+[layout](https://github.com/Sterlingh78/SvelteProject/blob/master/src/routes/%2Blayout.svelte)
+
+[auth routes](https://github.com/Sterlingh78/SvelteProject/tree/master/src/routes/auth)
+
+[profile](https://github.com/Sterlingh78/SvelteProject/blob/master/src/routes/profile/%2Bpage.svelte)
+
+
 //////
 
 ## Tween
